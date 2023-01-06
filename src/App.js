@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CallApi from './CallApi';
 import BreedSelect from './Form';
+import './style.css'
 
 function App() {
   const breedListUrl = 'https://dog.ceo/api/breeds/list/all';
@@ -17,9 +18,12 @@ function App() {
 }, []);
 
   return (
-    <div>
-      <BreedSelect breed={apiResponse}/>
-    </div>
+    
+    <main>
+      <div className='form-content'>
+        <BreedSelect breed={apiResponse}/>
+      </div>
+    </main>
   );
 }
 
